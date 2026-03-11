@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Siradel
+# SPDX-License-Identifier: MIT
+
+module(name = "clang_format_prebuilt-test")
+
+bazel_dep(name = "clang_format_prebuilt")
+local_path_override(
+    module_name = "clang_format_prebuilt",
+    path = "../",
+)

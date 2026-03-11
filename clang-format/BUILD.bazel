@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2026 Siradel
+# SPDX-License-Identifier: MIT
+
+load(":binary.bzl", "clang_format_binary")
+
+package(default_visibility = ["//visibility:public"])
+
+toolchain_type(
+    name = "toolchain_type",
+)
+
+clang_format_binary(
+    name = "clang-format",
+)
