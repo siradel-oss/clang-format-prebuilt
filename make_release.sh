@@ -53,4 +53,4 @@ sed -e 's|%WINDOWS_URL%|'"$WINDOWS_URL"'|g' \
     -e 's|%LINUX_URL%|'"$LINUX_URL"'|g' \
     -e 's|%LINUX_INTEGRITY%|'"$LINUX_INTEGRITY"'|g' \
     -e 's|%LINUX_PREFIX%|'"$LINUX_ARTIFACT_NAME"'|g' \
-    repo/release_info.tpl.bzl > repo/release_info.bzl
+    repo/clang-format/release_info.tpl.bzl > repo/clang-format/release_info.bzl

@@ -8,7 +8,7 @@ module(
 
 bazel_dep(name = "platforms", version = "1.0.0")
 
-prebuilt_extension = use_extension("//:extensions.bzl", "prebuilt_extension")
+prebuilt_extension = use_extension("//clang-format:extensions.bzl", "prebuilt_extension")
 use_repo(prebuilt_extension, "clang_format_prebuilt_toolchains")
 
 register_toolchains("@clang_format_prebuilt_toolchains//:all")

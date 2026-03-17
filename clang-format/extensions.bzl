@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: MIT
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
-load("//:release_info.bzl", "RELEASE_INFO")
+load(":release_info.bzl", "RELEASE_INFO")
 
 def _executable_extension(os):
     if os == "windows":

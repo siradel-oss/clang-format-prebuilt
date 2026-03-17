@@ -33,7 +33,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add release_info.bzl
+          git add clang-format/release_info.bzl
           git commit -m "Release clang-format ${{ inputs.version }}"
           git tag -a v${{ inputs.version }} -m "clang-format ${{ inputs.version }}"
           git push origin main --tags
