@@ -8,3 +8,5 @@ local_path_override(
     module_name = "clang_format_prebuilt",
     path = "../",
 )
+
+bazel_dep(name = "bazel_lib", version = "3.2.2")
