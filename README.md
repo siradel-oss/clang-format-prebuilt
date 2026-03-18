@@ -21,6 +21,18 @@ bazel run @clang_format_prebuilt//clang-format -- ARGS
 
 Arguments referencing paths should be absolute, as Bazel executes the binary from a different working directory.
 
+## Creating a release
+
+To create a release, trigger an action workflow with the version number as input.
+The workflow will create a new release on GitHub and upload the prebuilt clang-format binary as an asset.
+
+Go to the "Actions" tab, select the "Download and release prebuilt clang-format" workflow, and click on "Run workflow".
+Enter the version number (e.g., `15.0.7`) and click on "Run workflow" to start the release process.
+
+If the workflow fails during the release process, fix the issue and re-run it. If the release was created successfully, you can delete it from the "Releases" tab, as well as the associated tag, to clean up the repository. This can happen if files paths or URLs change.
+
+If the test workflow fails but the release was successful, you can fix the failure on main and just create a new tag, for example `15.0.7-1`. The metadata associated with release `15.0.7` will be reused.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

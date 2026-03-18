@@ -3,6 +3,8 @@
 # SPDX-FileCopyrightText: 2026 Siradel
 # SPDX-License-Identifier: MIT
 
+set -e
+
 VERSION=$1
 
 LICENSE_URL=https://github.com/llvm/llvm-project/blob/llvmorg-$VERSION/LICENSE.TXT

@@ -17,6 +17,7 @@ env:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   clang-format-prebuilt:
@@ -46,3 +47,10 @@ jobs:
             --title "clang-format ${{ inputs.version }}" \
             $WINDOWS_ARTIFACT_NAME.tar.xz \
             $LINUX_ARTIFACT_NAME.tar.xz
+      - name: Trigger test workflow
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run test.yml \
+            --repo ${{ github.repository }} \
+            --ref main
